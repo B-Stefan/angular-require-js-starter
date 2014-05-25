@@ -26,6 +26,7 @@ what
 *.sublime-workspace
 .mimosa
 .idea
+.openshift
 # Output folder
 /public
 /dist
