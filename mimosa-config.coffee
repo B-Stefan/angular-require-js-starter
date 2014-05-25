@@ -61,7 +61,6 @@ exports.config =
               "assets"
               ".git"
               ".idea"
-              ".gitignore"
               ".mimosa"
               "node_modules"
     ]

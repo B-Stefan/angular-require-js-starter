@@ -30,6 +30,9 @@ clean:
 pack:
 	@echo "[x] Building and packaging application..."
 	@$(build) -omp
+	cd dist
+	perl -pi -w -e 's/server.coffee/server.js/g;' *.*
+	cd ..
 
 package:
 	@echo "[x] Building and packaging application..."
