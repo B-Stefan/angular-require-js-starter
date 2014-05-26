@@ -39,7 +39,6 @@ exports.startServer = (config, callback) ->
   router.get '/purl/:name', routes.purl(config)
   router.get '/sendMail', routes.purl(config)
   console.log("PORT " + port)
-  console.log("IP " + ip)
   console.log("ENV" + env)
   server = app.listen port, ->
     console.log "Express server listening on port %d in %s mode", server.address().port, app.settings.env
