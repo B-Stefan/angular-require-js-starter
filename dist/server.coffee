@@ -27,13 +27,15 @@ exports.startServer = (config, callback) ->
   app.set 'view engine', config.server.views.extension
   app.use bodyParser()
   app.use methodOverride()
-  app.use compression()
 
   app.use(cookieParser());
   app.use(cookieSession({ secret: 'keyboard cat', cookie: { secure: true }}))
 
+  app.use compression(
+    filter:  (req, res) ->return true
+  )
   app.use config.server.base, router
-  app.use express.static(config.watch.compiledDir)
+  app.use express.static(config.watch.compiledDir,{ maxAge: 86400000 })
 
 
   router.get '/', routes.index(config)

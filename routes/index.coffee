@@ -12,7 +12,7 @@ index = (config) ->
     daytime:
       morning: hours >= 6 && hours < 11
       day: hours >= 11 && hours < 21
-      night: hours >= 21 && hours <= 24 || hours > 0 &&  hours < 6
+      night: hours >= 21 && hours <= 24 || hours >= 0 &&  hours < 6
 
   if options.daytime.morning
     options.daytime.cssClass = 'morning'
