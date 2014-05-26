@@ -1,5 +1,4 @@
 require
-  urlArgs: "b=#{(new Date()).getTime()}"
   paths:
     jquery: 'vendor/jquery/jquery'
     'lib-jquery.easing': 'vendor/jquery.easing/jquery.easing.min'
@@ -15,11 +14,11 @@ require
       exports: '$'
 
 
-
 define ['jquery',
         'lib-jquery.easing',
         'lib-jquery.hipchat',
-        'waypoints'], ($,unsued,unsued1,unused3)->
+        'waypoints'],
+($,unsued,unsued1,unused3)->
   #jQuery to collapse the navbar on scroll
   $(window).scroll ->
     if $(".navbar").offset().top > 50
@@ -29,15 +28,14 @@ define ['jquery',
     return
 
 
-  #jQuery for page scrolling feature - requires jQuery Easing plugin
-  $ ->
-    $(".page-scroll a").bind "click", (event) ->
-      $anchor = $(this)
-      $("html, body").stop().animate
-        scrollTop: $($anchor.attr("href")).offset().top
-      , 1500, "easeInOutExpo"
-      event.preventDefault()
-      return
+  #jQuery for page scrolling feature - requires jQuery Easing plugi
+  $(".page-scroll a").bind "click", (event) ->
+    $anchor = $(this)
+    $("html, body").stop().animate
+      scrollTop: $($anchor.attr("href")).offset().top
+    , 1500, "easeInOutExpo"
+    event.preventDefault()
+    return
 
   $('#contact').waypoint(
     offset: ()->

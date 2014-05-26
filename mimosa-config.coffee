@@ -29,7 +29,11 @@ exports.config =
           { fonts: "../../fonts" }
           "css/font-awesome.css"
         ]
-
+  minifyJS: {
+    exclude:[/\.min\./, "javascripts/main.js"]
+  }
+  requrejs:
+    optimize: 'none'
   combine:
     folders: [
       {
@@ -38,7 +42,7 @@ exports.config =
         order: [
           'vendor/bootstrap/bootstrap.css'
           'vendor/font-awesome/font-awesome.css'
-          'vendor/bootstrap/theme.css'
+          #'vendor/bootstrap/theme.css'
         ]
         ###
         exclude: [
