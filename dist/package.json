@@ -33,6 +33,7 @@
     "express": "4.3.1",
     "handlebars": "1.2.1",
     "method-override": "^1.0.2",
+    "newrelic": "^1.6.0",
     "node-hipchat": "^0.4.5",
     "serve-favicon": "^2.0.0"
   },
