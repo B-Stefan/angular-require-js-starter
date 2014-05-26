@@ -28,7 +28,6 @@ what
 .idea
 .openshift
 # Output folder
-/public
 /.mimosa/require/tracking.json
 
 # Numerous always-ignore extensions
