@@ -29,7 +29,7 @@ define ['jquery',
 
 
   #jQuery for page scrolling feature - requires jQuery Easing plugi
-  $(".page-scroll a").bind "click", (event) ->
+  $(".page-scroll a ").bind "click", (event) ->
     $anchor = $(this)
     $("html, body").stop().animate
       scrollTop: $($anchor.attr("href")).offset().top

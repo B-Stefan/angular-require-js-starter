@@ -15,6 +15,7 @@ exports.config =
     "combine"
     "server-reload"
     "web-package"
+    "minify-img"
   ]
   bower:
     copy:
@@ -74,3 +75,13 @@ exports.config =
     views:
       compileWith: "handlebars"
       extension: "hbs"
+
+  minifyImg: {
+    options: {
+      interlaced: false,
+      progressive: true,
+      cache: true,
+      optimizationLevel: 2
+    },
+    exts: [ "gif","jpeg","jpg","png" ]
+  }
