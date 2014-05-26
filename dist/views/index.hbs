@@ -75,10 +75,9 @@
                 </div>
             </div>
 
-            <p>ich bin ein junger inovativer Kopf aus der schönen Hansestadt Bremen, der sich der Herrausforderung
-                stellt Ihnen eine optimale Beratung und Betreung von Softwareprojekten anzubieten. </p>
+            <p>ich bin ein junger inovativer Kopf aus der schönen Hansestadt Bremen, der sich Ihrer Herrausforderung im Bereich Softwareentwicklung und Beratung stellt.  Ich unterstütze Sie  gerne in der  Projektbetreuung und Umsetzung von Unternehmensspezifischen Prozessen. </p>
 
-            <p>Nachfolgend erhalten Sie einen kleinen Einblick in meine Fähigkeiten:</p>
+            <p>{{#if name }} Ich hoffe ich habe Sie neugirig gemacht {{name}} ?  <br>{{/if}}Nachfolgend erhalten Sie einen kleinen Einblick in meine Fähigkeiten:</p>
             <br>
 
             <div class="row">
@@ -147,11 +146,11 @@
 <section id="projectmanagement" class="content-section text-center">
     <div class="projectmanagement-section">
         <div class="container">
-            <div class="col-lg-7 col-lg-offset-5">
+            <div class="col-lg-7 col-lg-offset-5 page-scroll">
                 <h2>Projektmanamgent</h2>
 
-                <p>Gerade in KMU-Unternehmen wird bei Softwareprojekten der Zeitaufwand bei der Definition von Anforderungen und Einführung der Software oft unterschätzt.  Dies führt nicht selten zu Verzögerungen und Mehrkosten des Projekts. </p>
-                <p>Eine professionelle externe Unterstützung kann hier sinnvoll sein. <br> Durch fokussierung des Projektziel und keine Störungen durch den Arbeitsalltag bringe ich Ihr Projekt kontinuierlich vorran. </p>
+                <p>Gerade in KMU-Unternehmen wird bei Softwareprojekten der Zeitaufwand bei der Definition von Anforderungen und Einführung der Software oft unterschätzt.  Dies führt nicht selten zu Verzögerungen und Mehrkosten. </p>
+                <p>Eine professionelle externe Unterstützung kann hier sinnvoll sein. <br> Durch fokussierung des Projektziel und erprobte Arbeitsweisen bringe ich Ihr Projekt kontinuierlich vorran. </p>
                 <br>
                 <a href="#contact" class="btn btn-default btn-lg">Kontaktieren Sie mich</a>
             </div>
@@ -168,8 +167,11 @@
                 <div class="contact-chat"></div>
             {{else}}
                 <h2>Kontaktieren Sie mich </h2>
-                <p> Sorry {{name}} aber ich scheine gerade nicht am Rechner zu sein. Schreiben Sie mir aber doch eine Mail </p>
+                <p> Sorry {{name}} aber ich scheine gerade nicht am Rechner zu sein. <br>  Schreiben Sie mir aber  doch gerne eine Mail. </p>
+                <a href="mailto:sbieliauskas@stud.hs-bremen.de"  class="btn btn-default btn-lg">Schreiben Sie mir</a>
+                <p>   <br>Ich werde mich schnellstmögich um ihr anliegen kümmern.</p>
 
+                <!--
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Name</label>
@@ -195,24 +197,15 @@
                         </div>
                     </div>
                 </form>
+                -->
             {{/if}}
-
-            <br>
-            <p>Oder aber besuchen Sie eine meiner Profielseiten</p>
-            <ul class="list-inline banner-social-buttons">
-                <li><a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i
-                        class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                </li>
-                <li><a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i
-                        class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                </li>
-                <li><a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i
-                        class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                </li>
-            </ul>
         </div>
     </div>
 </section>
+
+<footer>
+        <a href="./imprint">Impressum</a>
+</footer>
 
 {{#optimize}}
     <p>Optimized mode. You are getting a single RequireJS optimized JavaScript file which includes all the page

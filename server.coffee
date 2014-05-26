@@ -3,6 +3,7 @@ engines = require 'consolidate'
 routes  = require './routes'
 favicon = require 'serve-favicon'
 routes.purl  = require('./routes/purl').purl
+routes.imprint  = require('./routes/imprint').imprint
 routes.sendMail  = require('./routes/sendMail').sendMail
 bodyParser  = require 'body-parser'
 methodOverride = require 'method-override'
@@ -38,6 +39,7 @@ exports.startServer = (config, callback) ->
   router.get '/', routes.index(config)
   router.get '/purl/:name', routes.purl(config)
   router.get '/sendMail', routes.purl(config)
+  router.get '/imprint', routes.imprint(config)
   console.log("PORT " + port)
   console.log("ENV" + env)
   server = app.listen port, ->

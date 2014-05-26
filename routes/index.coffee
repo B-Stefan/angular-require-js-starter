@@ -31,13 +31,18 @@ index = (config) ->
     "index"
 
   (req, res) ->
-    options.name = req.session.name
-    HC = new hipchat('88683c292d538cd35b749ee317b0cc');
-    HC.listUsers (data) ->
-      for user in data.users
-        if user.user_id = 793677
-          options.onlineState = (user.status == 'available')
-      res.render name, options
+
+    console.log(req.session.trusted)
+    if req.session.trusted == undefined  or req.session.trusted=false
+      res.render 'comingsoon', options
+    else
+      options.name = req.session.name
+      HC = new hipchat('88683c292d538cd35b749ee317b0cc');
+      HC.listUsers (data) ->
+        for user in data.users
+          if user.user_id = 793677
+            options.onlineState = (user.status == 'available')
+        res.render name, options
 
 
 
