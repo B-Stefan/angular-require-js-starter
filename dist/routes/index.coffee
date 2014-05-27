@@ -32,7 +32,7 @@ index = (config) ->
 
   (req, res) ->
 
-    console.log(req.session.trusted)
+
     if req.session.trusted == undefined  or req.session.trusted=false
       res.render 'comingsoon', options
     else
@@ -42,6 +42,17 @@ index = (config) ->
         for user in data.users
           if user.user_id = 793677
             options.onlineState = (user.status == 'available')
+        params = {
+        room: 585953, #Found in the JSON response from the call above
+        from: options.name,
+        message: 'Hey ich habe soeben deine Webseite aufgerufen',
+        color: 'yellow'
+        notify: true
+        };
+
+        HC.postMessage(params, (data)->
+
+        );
         res.render name, options
 
 
