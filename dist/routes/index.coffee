@@ -37,15 +37,24 @@ index = (config) ->
       res.render 'comingsoon', options
     else
       options.name = req.session.name
+      req.session.count  = req.session.count ? 0
+      req.session.count = req.session.count + 1
       HC = new hipchat('88683c292d538cd35b749ee317b0cc');
       HC.listUsers (data) ->
         for user in data.users
           if user.user_id = 793677
             options.onlineState = (user.status == 'available')
+
+
+        if req.session.count == 1
+          message = 'Hey ich habe soeben deine Webseite aufgerufen'
+        else
+          message = 'Zum zweiten mal habe ich deine Webseite aufgrufen insgesamt ' + req.session.count
+
         params = {
         room: 585953, #Found in the JSON response from the call above
         from: options.name,
-        message: 'Hey ich habe soeben deine Webseite aufgerufen',
+        message: message
         color: 'yellow'
         notify: true
         };
