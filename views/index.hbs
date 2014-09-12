@@ -14,7 +14,7 @@
     <link rel="apple-touch-startup-image" href="./images/ios-startup-image-portrait.png" media="(orientation:portrait)" />
     <link rel="apple-touch-icon" href="./images/icon.png"/>
 
-    <link rel="stylesheet" href="./stylesheets/styles.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
     <script type="text/javascript">
         if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
             var msViewportStyle = document.createElement("style");
@@ -25,11 +25,18 @@
     </script>
 </head>
 <body>
+<header>
+
+</header>
+
+<main ui-view>
+
+</main>
 
 
 {{#reload}}
     <script src="socket.io/socket.io.js"></script>
-    <script src="./javascripts/app/reload-client.js"></script>
+    <script src="./javascripts/reload-client.js"></script>
 {{/reload}}
 
 {{#optimize}}
@@ -37,7 +44,7 @@
 {{/optimize}}
 
 {{^optimize}}
-    <script src="./javascripts/vendor/requirejs/require.js" data-main="/javascripts/app/main.js"></script>
+    <script src="./javascripts/vendor/requirejs/require.js" data-main="/javascripts/main.js"></script>
 {{/optimize}}
 
 </body>

@@ -11,7 +11,6 @@ define [
 	angular.module 'app', [
 		'controllers'
 		'filters'
-    'ngTable'
     'ui.bootstrap'
     'ui.router'
 		'services'

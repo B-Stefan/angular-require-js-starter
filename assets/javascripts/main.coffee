@@ -7,28 +7,24 @@ requirejs ['config'], ->
       'jquery'
       'ang'
       'bootstrap'
-      'c/Login'
       'c/Home'
-      'c/Startups'
-      'filters/sumByKey'
-      'angular-servicestack'
   ],
   (app, hello, $, angular) ->
     router =($stateProvider, $urlRouterProvider) ->
         #
         # For any unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise "/home"
+        $urlRouterProvider.otherwise "/"
 
         #
         # Now set up the states
         $stateProvider.state("startups",
           url: "/startups"
-          templateUrl: "views/Startups.html"
+          templateUrl: 'templates/Home.hbs'
           controller: "Startups"
         )
         $stateProvider.state('home',
-          url: '/home'
-          templateUrl: 'views/Home.html'
+          url: '/'
+          templateUrl: 'templates/Home.hbs'
           controller: 'Home'
         )
 
