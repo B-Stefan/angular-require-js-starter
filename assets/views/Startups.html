@@ -1,0 +1,34 @@
+<div class="container">
+
+<h1>Liste aller Startups</h1>
+    <table ng-table class="table-click table table-hover">
+        <thead >
+            <tr>
+                <th>Unternehmen</th>
+                <th>Bereits investiert</th>
+                <th>Investment maximum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-click="openStartup(startup)" ng-class="{active: startup.active}" ng-repeat="startup in allStartups">
+                <td sortable="'name'">{{startup.name}}</td>
+                <td>{{startup.currentInvestedSum | currency: ' € '}}</td>
+                <td>{{startup.investmentLimit | currency: ' € '}}</td>
+                <td>{{startup.provider}}</td>
+                <td>{{startup.date | date: 'dd.mm.yyyy (hh:MM)'}}</td>
+                <td>{{startup.active }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Gesamtsumme</th>
+                <th>{{allStartups | sumByKey: 'currentInvestedSum' | currency: ' € '}}</th>
+                <th>{{allStartups | sumByKey: 'investmentLimit' | currency: ' € '}}</th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p>{selectedRows | json}}</p>
+</div>
+
+

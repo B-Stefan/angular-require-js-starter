@@ -1,0 +1,84 @@
+@import 'vendor/bootstrap/variables';
+@import "vendor/bootstrap/bootstrap";
+@import "vendor/angular-ui/ui-grid-unstable.css";
+
+table {
+  &.table-click {
+
+    tbody {
+      tr {
+        &.active {
+          background-color: lightgreen;
+        }
+        td {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+  }
+}
+.myGrid {
+  width: 100%;
+  height: 500px;
+}
+form {
+  &[name="loginForm"] {
+    max-width: 300px;
+    background-color: @grayLighter;
+
+    margin: 10px;
+    padding: 10px;
+
+    input {
+
+      &.ng-invalid {
+
+        &.ng-dirty {
+
+          border: 1px solid red;
+
+        }
+
+      }
+
+      &.ng-valid {
+
+        border: 1px solid green;
+
+      }
+
+    }
+
+    span {
+
+      &.error {
+
+        padding: 5px;
+        display: inline-block;
+        font-size: 0.8em;
+        color: red;
+
+      }
+
+    }
+
+    &.submitted {
+
+      input {
+
+        &.ng-invalid {
+
+          border: 1px solid red;
+
+        }
+
+      }
+
+    }
+
+  }
+}
+

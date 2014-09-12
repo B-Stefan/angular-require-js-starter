@@ -1,0 +1,7 @@
+<div class="container">
+    <input ng-model="searchTerm" >
+    <ul>
+        <li ng-repeat="item in list | filter: searchTerm">{{item}}</li>
+    </ul>
+
+</div>
