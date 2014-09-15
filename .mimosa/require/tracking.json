@@ -1,0 +1,228 @@
+{
+  "shims": {
+    "/javascripts/main.js": {
+      "angular-socket-io": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-ui-router": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-ui-bootstrap": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-servicestack": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-scroll": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-inview": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "lib-jquery.hipchat": {
+        "deps": [
+          "ang"
+        ],
+        "exports": "$"
+      },
+      "ang": {
+        "deps": [
+          "vendor/modernizr"
+        ],
+        "exports": "angular"
+      },
+      "angular-resource": [
+        "ang"
+      ],
+      "vendor/modernizr": {
+        "exports": "Modernizr"
+      }
+    }
+  },
+  "deps": {
+    "/javascripts/app.js": [
+      "ang",
+      "c/controllers",
+      "directives/directives",
+      "filters/filters",
+      "services/services",
+      "angular-ui-router",
+      "angular-ui-bootstrap",
+      "angular-socket-io",
+      "angular-scroll",
+      "angular-inview"
+    ],
+    "/javascripts/bootstrap.js": [
+      "ang",
+      "app"
+    ],
+    "/javascripts/controllers/Home.js": [
+      "c/controllers"
+    ],
+    "/javascripts/controllers/Login.js": [
+      "./controllers"
+    ],
+    "/javascripts/controllers/controllers.js": [
+      "require",
+      "ang"
+    ],
+    "/javascripts/directives/directives.js": [
+      "ang"
+    ],
+    "/javascripts/directives/hipchat.js": [
+      "./directives"
+    ],
+    "/javascripts/directives/scrollOffset.js": [
+      "./directives"
+    ],
+    "/javascripts/directives/staticInclude.js": [
+      "./directives"
+    ],
+    "/javascripts/filters/filters.js": [
+      "ang"
+    ],
+    "/javascripts/filters/sumByKey.js": [
+      "./filters"
+    ],
+    "/javascripts/filters/twitterfy.js": [
+      "filters/filters"
+    ],
+    "/javascripts/main.js": [
+      "app",
+      "l18n!nls/hello",
+      "bootstrap",
+      "c/Home",
+      "services/socket",
+      "directives/staticInclude",
+      "directives/scrollOffset",
+      "directives/hipchat"
+    ],
+    "/javascripts/nls/fr-fr/hello.js": [],
+    "/javascripts/nls/hello.js": [],
+    "/javascripts/services/services.js": [
+      "ang"
+    ],
+    "/javascripts/services/socket.js": [
+      "./services"
+    ]
+  },
+  "aliases": {
+    "/javascripts/main.js": {
+      "c": "controllers",
+      "l18n": "vendor/l18n",
+      "jquery": "vendor/jquery",
+      "ang": "vendor/angular/angular",
+      "angular-ui-router": "vendor/angular-ui-router/angular-ui-router",
+      "angular-ui-bootstrap": "vendor/angular-bootstrap/ui-bootstrap-tpls",
+      "angular-servicestack": "vendor/angular-servicestack/angular-servicestack",
+      "angular-resource": "vendor/angular-resource/angular-resource",
+      "angular-socket-io": "vendor/angular-socket-io/socket",
+      "angular-scroll": "vendor/angular-scroll/angular-scroll.min",
+      "angular-inview": "vendor/angular-inview/angular-inview",
+      "lib-jquery.hipchat": "vendor/jquery.hipchat/jquery.hipchat",
+      "async": "vendor/require-plugins/async",
+      "font": "vendor/require-plugins/font",
+      "goog": "vendor/require-plugins/goog",
+      "image": "vendor/require-plugins/image",
+      "json": "vendor/require-plugins/json",
+      "noext": "vendor/require-plugins/noext",
+      "mdown": "vendor/require-plugins/mdown",
+      "propertyParser": "vendor/require-plugins/propertyParser"
+    }
+  },
+  "mappings": {
+    "/javascripts/main.js": null
+  },
+  "packages": {
+    "/javascripts/main.js": null
+  },
+  "originalConfig": {
+    "shim": {
+      "angular-socket-io": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-ui-router": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-ui-bootstrap": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-servicestack": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-scroll": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "angular-inview": {
+        "deps": [
+          "ang"
+        ]
+      },
+      "lib-jquery.hipchat": {
+        "deps": [
+          "ang"
+        ],
+        "exports": "$"
+      },
+      "ang": {
+        "deps": [
+          "vendor/modernizr"
+        ],
+        "exports": "angular"
+      },
+      "angular-resource": [
+        "ang"
+      ],
+      "vendor/modernizr": {
+        "exports": "Modernizr"
+      }
+    },
+    "paths": {
+      "c": "controllers",
+      "l18n": "vendor/l18n",
+      "jquery": "vendor/jquery",
+      "ang": "vendor/angular/angular",
+      "angular-ui-router": "vendor/angular-ui-router/angular-ui-router",
+      "angular-ui-bootstrap": "vendor/angular-bootstrap/ui-bootstrap-tpls",
+      "angular-servicestack": "vendor/angular-servicestack/angular-servicestack",
+      "angular-resource": "vendor/angular-resource/angular-resource",
+      "angular-socket-io": "vendor/angular-socket-io/socket",
+      "angular-scroll": "vendor/angular-scroll/angular-scroll.min",
+      "angular-inview": "vendor/angular-inview/angular-inview",
+      "lib-jquery.hipchat": "vendor/jquery.hipchat/jquery.hipchat",
+      "async": "vendor/require-plugins/async",
+      "font": "vendor/require-plugins/font",
+      "goog": "vendor/require-plugins/goog",
+      "image": "vendor/require-plugins/image",
+      "json": "vendor/require-plugins/json",
+      "noext": "vendor/require-plugins/noext",
+      "mdown": "vendor/require-plugins/mdown",
+      "propertyParser": "vendor/require-plugins/propertyParser"
+    }
+  },
+  "requireFiles": [
+    "/javascripts/main.js"
+  ]
+}

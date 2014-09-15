@@ -29,12 +29,7 @@ clean:
 
 pack:
 	@echo "[x] Building and packaging application..."
-	@$(build) -pm
-
-	cd dist perl -pi -w -e 's/server.coffee/server.js/g;' *.*; \
-	cd dist coffee -c server.coffee; \
-	cd dist coffee -c routes; \
-
+	@$(build) -omp
 
 package:
 	@echo "[x] Building and packaging application..."
