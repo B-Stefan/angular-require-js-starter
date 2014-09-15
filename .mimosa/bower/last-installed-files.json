@@ -1,0 +1,9 @@
+[
+  "assets/javascripts/vendor/angular-inview/angular-inview.js",
+  "assets/javascripts/vendor/angular-scroll/angular-scroll.min.js",
+  "assets/javascripts/vendor/angular-socket-io/socket.js",
+  "assets/javascripts/vendor/angular/angular.js",
+  "assets/javascripts/vendor/jquery/jquery.js",
+  "assets/javascripts/vendor/requirejs/require.js",
+  "assets/stylesheets/vendor/font-awesome/font-awesome.css"
+]
