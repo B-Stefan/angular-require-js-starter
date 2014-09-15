@@ -1,4 +1,5 @@
 exports.config =
+
   modules: [
     "copy"
     "server"
@@ -12,12 +13,19 @@ exports.config =
     "coffeescript"
     "less"
     "server-reload"
+    "web-package"
     ]
-
+  'web-package':
+    exclude: ['node_modules']
+  copy:
+    exclude: ['']
   minifyJS:
     mangleNames:false
 
+  liveReload:
+    enabled: false
   server:
       views:
           compileWith: "handlebars"
           extension: "hbs"
+

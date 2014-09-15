@@ -1,6 +1,6 @@
-define ['require', 'ang', 'app'], (require, angular) ->
-	'use strict'
-	require ['vendor/domReady!'], (document) ->
-		angular.bootstrap document, ['app']
+define ['ang','app'], (angular) ->
+  window.setTimeout(()->
+    angular.bootstrap document, ['app']
+  ,1)
 
 
