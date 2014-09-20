@@ -1,6 +1,6 @@
 define ['./services'], (services)->
   services.factory 'socket', (socketFactory)->
     mySocket = socketFactory();
-    mySocket.forward('hipchat-state')
-    window.test = mySocket
+    #Add events to broadcast
+    mySocket.forward('msg')
     return mySocket;

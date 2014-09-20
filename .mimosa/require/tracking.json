@@ -71,9 +71,6 @@
     "/javascripts/controllers/Home.js": [
       "c/controllers"
     ],
-    "/javascripts/controllers/Login.js": [
-      "./controllers"
-    ],
     "/javascripts/controllers/controllers.js": [
       "require",
       "ang"
@@ -95,9 +92,6 @@
     ],
     "/javascripts/filters/sumByKey.js": [
       "./filters"
-    ],
-    "/javascripts/filters/twitterfy.js": [
-      "filters/filters"
     ],
     "/javascripts/main.js": [
       "app",

@@ -5,7 +5,7 @@ define ['./directives'], (module)->
     (scope, element, attrs) ->
       console.log(arguments)
       options = {
-        url: attrs.url ? "www.hipchat.com/gk2Lvjf6Y"
+        url: attrs.url ? "www.hipchat.com/yourRoomID"
         timezone: attrs.hipchatTimezone ? 'Europe/Berlin'
         showButton: attrs.hipchatShowButton ?  false
         welcome: attrs.hipchatWelcome ? 'Wie kann ich Ihnen weiterhelfen ? '
